@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KLEblioteca</title>
+  <style>
+    * * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #f5f5f7;
+  color: #1d1d1f;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+nav h2 {
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.search-bar {
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 14px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.game-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: all 0.25s ease;
+  border: 1px solid #eee;
+}
+
+.game-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.game-box h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #0071e3;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.download-btn:hover {
+  background: #005bb5;
+}
+
+section {
+  padding: 50px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.contact {
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.contact button {
+  padding: 12px;
+  border-radius: 999px;
+  border: none;
+  background: #0071e3;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #6e6e73;
+}
+  </style>
+</head>
+<body>
+ <nav>
+  <h2>📚 KLEBERteca</h2>
+  <ul>
+    <li><a href="#livros">Livros</a></li>
+    <li><a href="#quadrinhos">Quadrinhos</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<header id="livros">
+  <h1>Bookstation</h1>
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Buscar livro..." onkeyup="searchBooks()">
+  </div>
+</header>
+
+
+<div class="container" id="booksContainer">
+
+  <!-- LIVROS -->
+  <div class="game-box"><h3>Quadrinhos Marvel</h3><a href="linkj.htm" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Dom Casmurro</h3><a href="dom-casmurro.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>O Pequeno Príncipe</h3><a href="o_pequeno_principe_-_antoine_de_saint-exupery_1.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>1984</h3><a href="1984.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Orgulho e Preconceito</h3><a href="ORGULHO-E-PRECONCEITO-Austen-Jane.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>A Revolução dos Bichos</h3><a href="ardb.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>O Hobbit</h3><a href="O-Hobbit-J.R.R.-Tolkien.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Harry Potter e a Pedra Filosofal</h3><a href="j.k._rowling_-_1_-_harry_potter_e_a_pedra_filosofal.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>O Senhor dos Anéis</h3><a href="osrda.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>O Código Da Vinci</h3><a href="ocdd.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Crepúsculo</h3><a href="crp.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Jogos Vorazes</h3><a href="jgz.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>It: A Coisa</h3><a href="it.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>O Iluminado</h3><a href="oilu.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Drácula</h3><a href="dra.pdf" class="download-btn">Download</a></div>
+  <div class="game-box"><h3>Frankenstein</h3><a href="Frankenstein - Mary Shelley.pdf" class="download-btn">Download</a></div>
+   <div class="game-box"><h3>Os Miseráveis</h3><a href="Os Miseraveis - Victor Hugo.pdf class="download-btn">Download</a></div>
+<div class="game-box"><h3>O Conde de Monte C1risto</h3><a href="O-Conde-de-Monte-Cristo-Alexandre-Dumas-1_compressed1.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>A Metamorfose</h3><a href="A-metamorfose-978-65-89008-23-1.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>O Processo</h3><a href="O Processo - Franz Kafka.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Admirável Mundo Novo</h3><a href="admiravel-mundo-novo.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Fahrenheit 451</h3><a href="fahrenheit-451-ray-bradbury.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>O Apanhador no Campo de Centeio</h3><a href="J_D_Salinger-O_Apanhador_no_Campo_de_Centeio.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>As Crônicas de Nárnia</h3><a href="c.s._lewis_-_as_cr__nicas_de_n__rnia__volume_unico_.pdf class="download-btn">Download</a></div>
+<div class="game-box"><h3>Percy Jackson e o Ladrão de Raios</h3><a href="percy-jackson-e-os-olimpianos_-o-ladrao-de-raios-vol-1-rick-riordan.pdf class=class="download-btn">Download</a></div>
+<div class="game-box"><h3>A Menina que Roubava Livros</h3><a href="a-menina-que-roubava-livros.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>O Alquimista</h3><a href="paulo coelho - o alquimista.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Ensaio sobre a Cegueira</h3><a href="ensaio-sobre-a-cegueira1.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>crime e castigo</h3><a href="dostoievski-crime-e-castigo.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Capitães da Areia</h3><a href="capitaes-da-areia.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>O Nome do Vento</h3><a href="O Nome do Vento PDF.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Os Irmãos Karamazov</h3><a href="dostoievski-fiodor-os-irmaos-karamazov-completo.pdf" class="download-btn">Download</a></div>
+</div>
+<footer>
+  <p>© Feito por Kleber, sem fins lucartivos.</p>
+</footer>
+
+<script>
+function searchBooks() {
+  let input = document.getElementById('search').value.toLowerCase();
+  let boxes = document.getElementsByClassName('game-box');
+
+  for (let i = 0; i < boxes.length; i++) {
+    let title = boxes[i].innerText.toLowerCase();
+    boxes[i].style.display = title.includes(input) ? "block" : "none";
+  }
+}
+</script>
+
+</body>
+</html>
