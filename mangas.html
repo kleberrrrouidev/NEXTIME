@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadrinhos & Mangá</title>
+
+<style>
+:root {
+  --bg-yellow: #ffffff;
+  --bg-red: #da0000;
+  --text: #111;
+  --card: rgba(255,255,255,0.85);
+  --blur: blur(10px);
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 🎨 FUNDO MODERNO */
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    120deg,
+    var(--bg-yellow) 0%,
+    var(--bg-yellow) 48%,
+    var(--bg-red) 52%,
+    var(--bg-red) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+}
+
+/* OVERLAY SUAVE */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(60px);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* HEADER */
+header {
+  text-align: left;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* CONTAINER */
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* 📦 CARD MODERNO */
+.box {
+  background: var(--card);
+  backdrop-filter: var(--blur);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* efeito brilho */
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(70, 70, 70, 0.6), transparent);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.box:hover::before {
+  opacity: 1;
+}
+
+/* hover elegante */
+.box:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* TEXTOS */
+.box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+/* BOTÃO MODERNO */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Quadrinhos & Mangá- Em trabalho</h1>
+</header>
+
+<div class="container">
+
+  <div class="box">
+    <h2>Quadrinhos Marvel</h2>
+    <p>Explore histórias modernas e clássicas com heróis icônicos.</p>
+    <a href="#" class="btn">Explorar</a>
+  </div>
+
+  <div class="box">
+    <h2>Mangás Populares</h2>
+    <p>Descubra os mangás mais lidos com ação e narrativa envolvente.</p>
+    <a href="#" class="btn">Explorar</a>
+  </div>
+
+  <div class="box">
+    <h2>HQs DC</h2>
+    <p>Clássicos que definiram gerações e continuam relevantes hoje, e o criador ama DC. link do universo dc absouluto.</p>
+    <a href="https://drive.google.com/drive/u/1/folders/1-0-G5WCbZH5WG7Iz2ZVLlw2mlaSUp0cP" class="btn">Explorar</a>
+  </div>
+
+</div>
+
+</body>
+</html>
