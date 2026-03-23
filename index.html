@@ -5,155 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KLEblioteca</title>
   <style>
-    * * {
+    * * 
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Segoe UI", Roboto, sans-serif;
+  font-family: 'Comic Sans MS', 'Poppins', cursive, sans-serif;
 }
 
 body {
-  background: #f5f5f7;
-  color: #1d1d1f;
+  background: repeating-linear-gradient(
+    45deg,
+    #ffcc00 0px,
+    #ffcc00 12px,
+    #ffffff 12px,
+    #ffffff 24px
+  );
+  color: #333;
 }
 
+/* NAV */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(20px);
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid #ddd;
+  background: #ff3b3b;
+  box-shadow: 0 5px 0 #000;
 }
 
 nav h2 {
-  font-weight: 600;
+  color: #fff;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 20px;
 }
 
 nav a {
   text-decoration: none;
-  color: #1d1d1f;
-  font-size: 14px;
+  color: #ffee00;
+  font-weight: bold;
   transition: 0.2s;
 }
 
 nav a:hover {
-  opacity: 0.6;
+  transform: scale(1.1);
 }
 
+/* HEADER */
 header {
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 40px 20px;
 }
 
 header h1 {
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 34px;
+  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #000;
 }
 
+/* SEARCH */
 .search-bar {
-  max-width: 500px;
+  max-width: 400px;
   margin: 20px auto;
 }
 
 .search-bar input {
   width: 100%;
-  padding: 12px 15px;
-  border-radius: 12px;
-  border: 1px solid #ddd;
-  background: #fff;
-  font-size: 14px;
+  padding: 12px;
+  border-radius: 20px;
+  border: 3px solid #000;
+  outline: none;
 }
 
+/* GRID */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 30px;
 }
 
+/* GAME BOX */
 .game-box {
-  background: #fff;
-  border-radius: 18px;
-  padding: 25px 20px;
+  background-color: #fff;
+  background-image: radial-gradient(#000 1px, transparent 1px);
+  background-size: 12px 12px;
+  border-radius: 20px;
+  padding: 20px;
   text-align: center;
-  transition: all 0.25s ease;
-  border: 1px solid #eee;
+  border: 3px solid #000;
+  box-shadow: 6px 6px 0 #000;
+  transition: 0.2s;
 }
 
 .game-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translate(-5px, -5px);
+  box-shadow: 10px 10px 0 #000;
 }
 
 .game-box h3 {
-  font-size: 16px;
-  font-weight: 500;
   margin-bottom: 15px;
 }
 
+/* BUTTON */
 .download-btn {
   display: inline-block;
   padding: 10px 18px;
-  border-radius: 999px;
-  background: #0071e3;
+  border-radius: 20px;
+  background: #fdf900;
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-weight: bold;
+  border: 3px solid #000;
+  box-shadow: 3px 3px 0 #000;
   transition: 0.2s;
 }
 
 .download-btn:hover {
-  background: #005bb5;
+  transform: translate(-2px, -2px);
+  box-shadow: 5px 5px 0 #000;
 }
 
-section {
-  padding: 50px 20px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 25px;
-}
-
-.contact {
-  max-width: 500px;
-  margin: auto;
-}
-
+/* CONTACT */
 .contact input,
 .contact textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   margin: 10px 0;
-  border-radius: 12px;
-  border: 1px solid #ddd;
+  border-radius: 15px;
+  border: 3px solid #000;
 }
 
 .contact button {
-  padding: 12px;
-  border-radius: 999px;
-  border: none;
-  background: #0071e3;
-  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #000;
+  background: #ffcc00;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 #000;
 }
 
+.recommendations {
+  max-width: 900px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.rec-card {
+  display: none;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 3px solid #000;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 6px 6px 0 #000;
+}
+
+.rec-card.active {
+  display: flex;
+}
+
+/* imagem */
+.rec-card img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+/* texto */
+.rec-info h2 {
+  margin-bottom: 10px;
+}
+
+.rec-info p {
+  font-size: 14px;
+}
+
+/* 📱 mobile */
+@media (max-width: 600px) {
+  .rec-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .rec-card img {
+    width: 100px;
+    height: 140px;
+  }
+}
+
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: #6e6e73;
+  font-weight: bold;
 }
   </style>
 </head>
@@ -174,7 +227,32 @@ footer {
   </div>
 </header>
 
+<div class="recommendations">
+  <div class="rec-card active">
+    <img src="img cas.jpg">
+    <div class="rec-info">
+      <h2>Crime e Castigo</h2>
+      <p>Um jovem atormentado comete um crime e enfrenta um intenso conflito psicológico sobre culpa e moral.</p>
+    </div>
+  </div>
 
+  <div class="rec-card">
+    <img src="h.jpg">
+    <div class="rec-info">
+      <h2>O Hobbit</h2>
+      <p>Bilbo Bolseiro embarca em uma aventura inesperada cheia de perigos, dragões e tesouros.</p>
+    </div>
+  </div>
+
+  <div class="rec-card">
+    <img src="1999.jpg">
+    <div class="rec-info">
+      <h2>1984</h2>
+      <p>Uma sociedade controlada por um governo totalitário onde tudo é vigiado.</p>
+    </div>
+  </div>
+</div>
+  
 <div class="container" id="booksContainer">
 
   <!-- LIVROS -->
@@ -212,10 +290,11 @@ footer {
 <div class="game-box"><h3>Os Irmãos Karamazov</h3><a href="dostoievski-fiodor-os-irmaos-karamazov-completo.pdf" class="download-btn">Download</a></div>
 </div>
 <footer>
-  <p>© Feito por Kleber, sem fins lucartivos.</p>
+  <p>© Feito por Kleber, sem fins lucrativos.</p>
 </footer>
 
 <script>
+// 🔍 busca
 function searchBooks() {
   let input = document.getElementById('search').value.toLowerCase();
   let boxes = document.getElementsByClassName('game-box');
@@ -225,6 +304,21 @@ function searchBooks() {
     boxes[i].style.display = title.includes(input) ? "block" : "none";
   }
 }
+
+// 🎯 slider de recomendações
+document.addEventListener("DOMContentLoaded", function () {
+  let index = 0;
+  const cards = document.querySelectorAll(".rec-card");
+
+  function rotateCards() {
+    cards[index].classList.remove("active");
+    index = (index + 1) % cards.length;
+    cards[index].classList.add("active");
+  }
+
+  setInterval(rotateCards, 5000);
+});
+</script>
 </script>
 
 </body>
