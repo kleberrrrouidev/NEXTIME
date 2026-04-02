@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KLEblioteca</title>
+  <title>HandingEBooks</title>
   <style>
     * * 
  * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Comic Sans MS', 'Poppins', cursive, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
   background: repeating-linear-gradient(
     45deg,
-    #000000 0px,
+    #c5c5c5 0px,
     #000000 12px,
     #ffffff 12px,
     #ffffff 24px
@@ -63,7 +63,7 @@ header {
 
 header h1 {
   font-size: 34px;
-  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #000;
+  text-shadow: 2px 2px 0 #000000;
 }
 
 /* SEARCH */
@@ -90,7 +90,7 @@ header h1 {
 
 /* GAME BOX */
 .game-box {
-  background-color: #fff;
+  background-color: #d1d1d1;
   background-image: radial-gradient(#000 1px, transparent 1px);
   background-size: 12px 12px;
   border-radius: 20px;
@@ -115,8 +115,8 @@ header h1 {
   display: inline-block;
   padding: 10px 18px;
   border-radius: 20px;
-  background: #ffffff;
-  color: #000000;
+  background: #000000;
+  color: #fffefe;
   text-decoration: none;
   font-weight: bold;
   border: 3px solid #000;
@@ -212,20 +212,14 @@ footer {
 </head>
 <body>
  <nav>
-  <h2>📚 KLEBERteca</h2>
+  <h2>📚HandinEBooks</h2>
   <ul>
-    <li><a href="https://kleberrrrouidev.github.io/Kleosteam/ ">jogos</a></li>
-    <li><a href="mangas.html">Quadrinhos e mangas</a></li>
-    <li><a href="https://github.com/kleberrrrouidev">Contato</a></li>
+    <li><a href="https://kleberrrrouidev.github.io/Kleosteam/ ">jogos(cortesia)</a></li>
+    <li><a href="mangas.html">Quadrinhos</a></li>
+    <li><a href="https://www.instagram.com/handinebooks/?utm_source=ig_web_button_share_sheet">Contato</a></li>
   </ul>
 </nav>
 
-<header id="livros">
-  <h1>Bookstation</h1>
-  <div class="search-bar">
-    <input type="text" id="search" placeholder="Buscar livro..." onkeyup="searchBooks()">
-  </div>
-</header>
 
 <div class="recommendations">
   <div class="rec-card active">
@@ -243,13 +237,33 @@ footer {
     </div>
   </div>
   <div class="rec-card">
+    <img src="oantift.jpg">
+    <div class="rec-info">
+      <h2>O Anticristo</h2>
+      <p>O Anticristo é um livro do autor alemão Friedrich Nietzsche, escrito em 1888 e publicado em 1895. É considerado uma das mais ácidas críticas de Nietzsche ao cristianismo, célebre pela frase: "O Evangelho morreu na cruz"</p>
+    </div>
+  </div>>
+  <div class="rec-card">
+    <img src="ameta.jpg">
+    <div class="rec-info">
+      <h2>A Metamorfose</h2>
+      <p>Acompanhe esta obra de frank</p>
+    </div>
+  </div>
+  <div class="rec-card">
     <img src="h.jpg">
     <div class="rec-info">
       <h2>O Hobbit</h2>
       <p>Bilbo Bolseiro embarca em uma aventura inesperada cheia de perigos, dragões e tesouros.</p>
     </div>
   </div>
-
+  <div class="rec-card">
+    <img src="broder.jpg">
+    <div class="rec-info">
+      <h2>Os Irmãos Karamazov</h2>
+      <p>Os Irmãos Karamazov é um romance de Fiódor Dostoiévski, escrito em 1879, uma das mais importantes obras das literaturas russa e mundial, ou, conforme afirmou Freud: "a maior obra da história". </p>
+    </div>
+  </div>
   <div class="rec-card">
     <img src="1999.jpg">
     <div class="rec-info">
@@ -257,12 +271,22 @@ footer {
       <p>Uma sociedade controlada por um governo totalitário onde tudo é vigiado.</p>
     </div>
   </div>
-</div>
+</div> 
+
+<header id="livros">
+  <h1>Prateleira</h1>
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Buscar livro..." onkeyup="searchBooks()">
+  </div>
+</header>>
+
+
+ 
+
   
 <div class="container" id="booksContainer">
 
   <!-- LIVROS -->
-  <div class="game-box"><h3>Quadrinhos Marvel</h3><a href="linkj.htm" class="download-btn">Download</a></div>
   <div class="game-box"><h3>Dom Casmurro</h3><a href="dom-casmurro.pdf" class="download-btn">Download</a></div>
   <div class="game-box"><h3>O Pequeno Príncipe</h3><a href="o_pequeno_principe_-_antoine_de_saint-exupery_1.pdf" class="download-btn">Download</a></div>
   <div class="game-box"><h3>1984</h3><a href="1984.pdf" class="download-btn">Download</a></div>
@@ -278,33 +302,33 @@ footer {
   <div class="game-box"><h3>O Iluminado</h3><a href="oilu.pdf" class="download-btn">Download</a></div>
   <div class="game-box"><h3>Drácula</h3><a href="dra.pdf" class="download-btn">Download</a></div>
   <div class="game-box"><h3>Frankenstein</h3><a href="Frankenstein - Mary Shelley.pdf" class="download-btn">Download</a></div>
-   <div class="game-box"><h3>Os Miseráveis</h3><a href="Os Miseraveis - Victor Hugo.pdf class="download-btn">Download</a></div>
+   <div class="game-box"><h3>Os Miseráveis</h3><a href="Os Miseraveis - Victor Hugo.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>O Conde de Monte C1risto</h3><a href="O-Conde-de-Monte-Cristo-Alexandre-Dumas-1_compressed1.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>A Metamorfose</h3><a href="A-metamorfose-978-65-89008-23-1.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>O Processo</h3><a href="O Processo - Franz Kafka.pdf" class="download-btn">Download</a></div>
 
  <div class="game-box">
   <h3>Hamlet</h3>
-  <a href="Hamlet.pdf" class="download-btn">Download</a>
+  <a href="Tragical Hiftorie of Hamlet.pdf" class="download-btn">Download</a>
 </div>
   <div class="game-box">
   <h3>Assim Falou Zaratustra</h3>
-  <a href="Assim Falou Zaratustra.pdf" class="download-btn">Download</a>
+  <a href="assim" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
   <h3>A Genealogia da Moral</h3>
-  <a href="A Genealogia da Moral.pdf" class="download-btn">Download</a>
+  <a href="genealogia_da_moral__friedrich_nietszche__bpi.docx" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
   <h3>O Anticristo</h3>
-  <a href="O Anticristo.pdf" class="download-btn">Download</a>
+  <a href="Nietzsche - O Anticristo.pdf" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
   <h3>Além do Bem e do Mal</h3>
-  <a href="Além do Bem e do Mal.pdf" class="download-btn">Download</a>
+  <a href="alem_do_bem_e_do_mal__nietzsche__bpi.docx" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
@@ -429,7 +453,7 @@ footer {
 
 <div class="game-box">
   <h3>Diário de um Banana 5 A Verdade Nua e Crua</h3>
-  <a href="Diario de um Banana 5_ A verdade nua e cru - Jeff Kinney.pdf class="download-btn">Download</a>
+  <a href="Diario de um Banana 5_ A verdade nua e cru - Jeff Kinney.pdf" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
@@ -464,12 +488,12 @@ footer {
 
 <div class="game-box">
   <h3>Diário de um Banana 12 Apertem os Cintos</h3>
-  <a href="Diario de um Banana 12_ Apertem os cintos - Jeff Kinney.pdf class="download-btn">Download</a>
+  <a href="Diario de um Banana 12_ Apertem os cintos - Jeff Kinney.pdf" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
   <h3>Diário de um Banana 13 Quebra Tudo</h3>
-  <a href="Diario de um Banana 14_ Quebra tudo - Jeff Kinney.pdf class="download-btn">Download</a>
+  <a href="Diario de um Banana 14_ Quebra tudo - Jeff Kinney.pdf" class="download-btn">Download</a>
 </div>
 
 <div class="game-box">
@@ -490,8 +514,8 @@ footer {
 <div class="game-box"><h3>Admirável Mundo Novo</h3><a href="admiravel-mundo-novo.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>Fahrenheit 451</h3><a href="fahrenheit-451-ray-bradbury.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>O Apanhador no Campo de Centeio</h3><a href="J_D_Salinger-O_Apanhador_no_Campo_de_Centeio.pdf" class="download-btn">Download</a></div>
-<div class="game-box"><h3>As Crônicas de Nárnia</h3><a href="c.s._lewis_-_as_cr__nicas_de_n__rnia__volume_unico_.pdf class="download-btn">Download</a></div>
-<div class="game-box"><h3>Percy Jackson e o Ladrão de Raios</h3><a href="percy-jackson-e-os-olimpianos_-o-ladrao-de-raios-vol-1-rick-riordan.pdf class=class="download-btn">Download</a></div>
+<div class="game-box"><h3>As Crônicas de Nárnia</h3><a href="c.s._lewis_-_as_cr__nicas_de_n__rnia__volume_unico_.pdf" class="download-btn">Download</a></div>
+<div class="game-box"><h3>Percy Jackson e o Ladrão de Raios</h3><a href="percy-jackson-e-os-olimpianos_-o-ladrao-de-raios-vol-1-rick-riordan.pdf "class="download-btn">Download</a></div>
 <div class="game-box"><h3>A Menina que Roubava Livros</h3><a href="a-menina-que-roubava-livros.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>O Alquimista</h3><a href="paulo coelho - o alquimista.pdf" class="download-btn">Download</a></div>
 <div class="game-box"><h3>Ensaio sobre a Cegueira</h3><a href="ensaio-sobre-a-cegueira1.pdf" class="download-btn">Download</a></div>
@@ -501,7 +525,7 @@ footer {
 <div class="game-box"><h3>Os Irmãos Karamazov</h3><a href="dostoievski-fiodor-os-irmaos-karamazov-completo.pdf" class="download-btn">Download</a></div>
 </div>
 <footer>
-  <p>© Feito por Kleber, sem fins lucrativos.</p>
+  <p>© Grupo de devs NEXTIME.</p>
 </footer>
 
 <script>
@@ -527,7 +551,7 @@ document.addEventListener("DOMContentLoaded", function () {
     cards[index].classList.add("active");
   }
 
-  setInterval(rotateCards, 2000);
+  setInterval(rotateCards, 3000);
 });
 </script>
 </script>
